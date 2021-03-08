@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'font';
+    src: url('../static/GoldenRatio-Demo.otf');
+}
+
+body{
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.table{
+    width:100%;
+    background-color: rgba(253, 253, 253, 0.534);
+    position: absolute;
+    top:0;
+    left:0;
+    height: 2rem;
+}
+.tablink{
+    width: 23%;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 24px;
+    font-family: font;
+    border:none;
+    outline: none;
+    color:rgba(58, 57, 57, 0.795);
+    cursor: pointer;
+}
+.tablink:hover{
+    color:rgb(82, 65, 233);
+}
+
+.tab {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    font-family: 'font';
+}
+  
+/* Style the buttons inside the tab */
+.tab button {
+background-color: inherit;
+font-family: 'font';
+color:rgba(22, 22, 22, 0.938);
+float: left;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 15px;
+width: 25%;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+color: #ffffff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ffffff;
+    color: #1e275a;
+}
+
+/* Style the tab content */
+.tabcontent {
+    margin-top: 3.13rem;
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    max-height: 90%;
+    height: 35rem;
+}

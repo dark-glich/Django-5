@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'font';
+    src: url('../static/GoldenRatio-Demo.otf');
+}
+
+body{
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: linear-gradient(114.87deg, #A6FFCB, #12D8FA, #1FA2FF); 
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.table{
+    position: fixed;
+    width:100%;
+    background-color: rgba(253, 253, 253, 0.534);
+    top:0;
+    left:0;
+    height: 2.8em;
+
+}
+.tablinks{
+    position: sticky;
+    width: 40%;
+    min-width: fit-content;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 4vh;
+    font-family: roboto;
+    border:none;
+    outline: none;
+    color:rgba(58, 57, 57, 0.795);
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.tablinks:hover{
+    color:rgb(0, 0, 0);
+
+}
+
+#hometab{
+    margin-left: 4rem;
+    margin-right: -.5vw;
+}
+#tab {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    font-family: 'font';
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'font';
+    color:rgba(58, 57, 57, 0.795);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 1rem;
+    transition: 0.3s;
+    font-size: 15px;
+}
+#tab:hover {
+    color: #000000;
+}
+#tab.active {
+    background-color: #ffffff;
+    color: #1e275a;
+}
+.tabcontent {
+    padding: 6px 12px;
+    border-top: none;
+    max-height: 90%;
+    height: 35rem;
+}
+#Home{
+    text-align: center;
+    position: fixed;
+    margin:20vh 15%;
+    background-color: rgba(255, 255, 255, 0.424);
+    height: fit-content;
+    width: fit-content;
+    padding: 5vh 5vw;
+    border-radius: 2vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.searchbar{
+    width:50vw;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 6vh;
+    min-height: 30px;
+    font-family: font;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    
+}
+.searchbutton{
+    margin-left:-5.5px;
+    width: 5vw;
+    min-width: 30px;
+    height: 6vh;
+    cursor: pointer;
+    min-height: 30px;
+    outline: none;
+    border: none;
+    padding-bottom: 4px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #FF8008; 
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);
+    background: linear-gradient(to right, #FFC837, #FF8008);
+}
+.location{
+    margin-top: 5vh;
+    text-align: start;
+    color:rgba(58, 57, 57, 0.795);
+    font-size: 3vh;
+}
+.temp{
+    font-family: roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15vw;
+    margin-top: 10vh;
+    line-height: 15vw;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(114.87deg, #A6FFCB, #12D8FA, #1FA2FF); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.error{
+    font-family: roboto;
+    font-size: 5vw;
+    margin-top: 8vh;
+    padding-bottom: 4vh;
+    color: #ffffff;
+    text-align: center;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

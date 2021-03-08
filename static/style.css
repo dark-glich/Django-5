@@ -1,0 +1,201 @@
+@font-face {
+     font-family: 'font';
+     src: url('../static/GoldenRatio-Demo.otf');
+
+   }
+
+
+  body{
+    font-family: font;
+    background-color: #000000;
+    background: linear-gradient(114.87deg, #2693DC 4.22%, rgba(255, 255, 255, 0) 78.4%), #4019CC;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    font-family: 'font';
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    font-family: 'font';
+    color:rgba(255, 255, 255, 0.582);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 15px;
+    width: 25%;
+
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: #ffffff;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+        background-color: #ffffff;
+        color: #1e275a;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+        margin-top: 3.13rem;
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        max-height: 90%;
+        height: 35rem;
+  }
+  .text{ 
+    font-size: 300%;
+    position: absolute; 
+    top: 10%; 
+    left: 30%;
+    color: rgba(0, 0, 0, 0.596);
+    padding: 30px;
+    border-radius: 20px;
+
+  }
+  
+  .button{
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    bottom: 1.5rem;
+    left: 46.5%;
+    background: #FF8008;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC837, #FF8008);
+    border-radius: 100px;
+    outline: none;
+    color:white;
+    border:none;
+  }
+
+  .button:active { 
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    background-color: #e7ca4a;
+    /* Lowering the shadow */ 
+  } 
+  
+  .title{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 10px;
+  }
+  .upload{
+    position: absolute;
+    width: 322px;
+    height: 38px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    top:1rem;
+    left: 2.4rem;
+    text-align: center;
+  }
+  .download{
+    position: absolute;
+    width: 322px;
+    height: 38px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+    top:1rem;
+    left: 55%;
+    text-align: center;
+
+  }
+  .block{
+    position: absolute;
+    width: 70%;
+    height: 247px;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 38px;
+    top:35%;
+    left: 15%;
+  }
+  .line{
+    position: absolute;
+    width: 0px;
+    height: 197px;
+    left: 50%;
+    top:1.8rem;
+    border: 0.5px solid #e5e5e581;
+  }
+  .title{
+    position: absolute;
+    width: 713px;
+    height: 88px;
+    font-family: font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    left: 20%;
+    top:2.8rem;
+    
+    color: rgba(255, 255, 255, 0.616);
+  }
+  .uploadspeed{
+    position: absolute;
+    width: 322px;
+    height: 138px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8rem;
+    color: #ffffff;
+    top:3rem;
+    left: 3.4rem;
+    text-align: center;
+    background: linear-gradient(114.87deg, #2693DC 4.22%, rgba(255, 255, 255, 0) 78.4%), #4019CC;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .downloadspeed{
+    position: absolute;
+    width: 322px;
+    height: 138px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8rem;
+    color: #ffffff;
+    top:3rem;
+    left: 57%;
+    text-align: center;
+    background: linear-gradient(114.87deg, #2651dc 4.22%, rgba(255, 255, 255, 0) 78.4%), #4019CC;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+
+
+      

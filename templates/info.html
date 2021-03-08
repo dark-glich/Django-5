@@ -1,0 +1,124 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' type='text/css' media='screen' href="{%static 'weather_style.css' %}">
+<script src="{%static 'script.js' %}"></script>
+<link href="{% static 'GoldenRatio-Demo.otf' %}" rel="stylesheet" media="screen">
+<style>
+    .country{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10vw;
+        margin-top: 4vh;
+        line-height: 15vw;
+        color: #ffffff;
+        text-align: center;
+        background: linear-gradient(114.87deg, #A6FFCB, #12D8FA, #1FA2FF); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .capital{
+        font-family: roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3vh;
+        margin-bottom: 1vh;
+        color: #ffffff;
+        text-align: start;
+        background: #2c3e50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #odd{
+        background: #2c3e50;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #367299, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2d658a, #2c3e50);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #Home{
+    text-align: center;
+    position: fixed;
+    margin:10vh 15%;
+    background-color: rgba(255, 255, 255, 0.424);
+    height: fit-content;
+    width: fit-content;
+    padding: 5vh 5vw;
+    border-radius: 2vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    body{
+        font-family: font;
+        background: #83a4d4; 
+        background: linear-gradient(114.87deg, #b6fbff, #83a4d4); 
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #homeicon{
+        background: #F2994A;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F2C94C, #F2994A); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    #globtab{
+        padding-left: 20vw;
+    }
+    .link{
+        line-height: 3vh;
+        font-size: 2vh;
+        background: #0575E6;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+</style>
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none; background-color: rgba(255, 255, 255, 0.486);" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" style="background-color: white;" onclick="w3_close()">Close &times;</button>
+    <a href="{%url 'internet'%}" class="w3-bar-item w3-button ">Speed Test</a>
+    <a href="{%url 'weather'%}" class="w3-bar-item w3-button">Weather</a>
+  </div>
+
+    <button class="w3-xlarge" onclick="w3_open()" style="width:fit-content;" id="tab">☰</button>
+        
+    <div id="Home" class="tabcontent">
+    <form method="POST">{%csrf_token%}
+        {{form.country}}
+        <button class="searchbutton"><i class="fa fa-search"></i></button>
+        {% if data.0 == "No Data Found"%}
+        <div class="error">No Data Found...</div>
+        {%else%}
+        <div class="country"> {{country}} </div>
+        <div class="capital"> Capital - {{ data.0 }} </div>
+        <div class="capital" id="odd"> Currency - {{ data.1 }} </div>
+        <div class="capital"> Population - {{ data.2 }} </div>
+        <div class="capital" id="odd"> Country Code - {{ data.3 }} </div>
+        <a href="{{data.4}}" target="blank" class="link"> Know More...</a>
+        {%endif%}
+    </form>
+    </div>
+  
+  <div id="world" class="tabcontent"> </div>
+
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+</body>
+</html>

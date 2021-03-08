@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' type='text/css' media='screen' href="{%static 'style.css' %}">
+<script src="{%static 'script.js' %}"></script>
+<link href="{% static 'GoldenRatio-Demo.otf' %}" rel="stylesheet" media="screen">
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none; background-color: rgba(255, 255, 255, 0.486);" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" style="background-color: white;" onclick="w3_close()">Close &times;</button>
+    <a href="{%url 'weather'%}" class="w3-bar-item w3-button ">Weather</a>
+    <a href="{%url 'info'%}" class="w3-bar-item w3-button">Country Info</a>
+  </div>
+
+<div class="tab">
+     <button class="w3-xlarge" onclick="w3_open()" style="width:fit-content;">☰</button>
+</div>
+
+<div class="title">Internet Speed Test</div>
+  <div class="block">
+  <div>
+    <div class="upload">UPLOAD SPEED</div>
+    <div class="uploadspeed">{{upload_speed}}<small style="font-size:medium;">mbps</small></div>
+  </div>
+  <div class="line"></div>
+  <div>
+    <div class="download">DOWNLOAD SPEED</div>
+    <div class="downloadspeed">{{download_speed}}<small style="font-size:medium;">mbps</small></div>
+  </div>
+  </div>
+  <form method="POST">{% csrf_token %}
+  <button type="submit" name="speedtest" class="button">GO</button>
+
+</form>
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+     
+</body>
+</html> 
